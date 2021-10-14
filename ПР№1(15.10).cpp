@@ -51,7 +51,7 @@ int moda(int arr[], int n)
 float disp ( int arr[],int n)
 {
 	float mo=0,dis=0;
-	for (int i=0;i<n;i++)	mo=mo+arr[i];		//mo -ìàò îæèäàíèå
+	for (int i=0;i<n;i++)	mo=mo+arr[i];		//mo -Ğ¼Ğ°Ñ‚ Ğ¾Ğ¶Ğ¸Ğ´Ğ°Ğ½Ğ¸Ğµ
 	mo=mo/n;
 	for (int i=0;i<n;i++) dis=pow((arr[i]-mo),2)+dis;
 	dis=dis/(n-1);
@@ -62,10 +62,10 @@ float disp ( int arr[],int n)
 int main()
 {	setlocale (LC_ALL,"Russian");
 	int n, t=0;
-	cout<<"Ââåäèòå êîëè÷åñòâî ıëåìåíòîâ â ìàññèâå";
+	cout<<"Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ² Ğ² Ğ¼Ğ°ÑÑĞ¸Ğ²Ğµ";
 	cin>>n;
 	int arr[n];
-	cout<<"Ââåäèòå êàæäûé ıëåìåíò ÷åğåç ïğîáåë ";
+	cout<<"Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ĞºĞ°Ğ¶Ğ´Ñ‹Ğ¹ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ñ‡ĞµÑ€ĞµĞ· Ğ¿Ñ€Ğ¾Ğ±ĞµĞ» ";
 	for (int i=0;i<n;i++) cin>>arr[i];
 	for (int i=0;i<n-1;i++) {
 		for (int j=i+1;j<n;j++) {
@@ -77,12 +77,12 @@ int main()
 		}
 	}
 	int min=0,max=0,sum=0,k=0;     //	for (int i=0;i<n;i++) cout<<arr[i]<<endl;
-	cout<<"max="<<maximum(arr,max,n)<<endl<<"min="<<minimum(arr,min,n)<<endl<<"Ğàçìàõ="<<maximum(arr,max,n)-minimum(arr,min,n)<<endl<<"Ñğåäíåå çíà÷åíèå="<<srznach(arr,sum,n)<<endl;
-	if (n%2==0) cout<<"Ìåäèàíà="<<float (arr[n/2]+arr[n/2-1])/2<<endl;
-	else cout<<"Ìåäèàíà="<<arr[n/2]<<endl;
-	cout<<"Ìîäà= ";
-	if (moda(arr,n)==0) cout<<"Ìîäû íåò"<<endl;
+	cout<<"max="<<maximum(arr,max,n)<<endl<<"min="<<minimum(arr,min,n)<<endl<<"Ğ Ğ°Ğ·Ğ¼Ğ°Ñ…="<<maximum(arr,max,n)-minimum(arr,min,n)<<endl<<"Ğ¡Ñ€ĞµĞ´Ğ½ĞµĞµ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ğµ="<<srznach(arr,sum,n)<<endl;
+	if (n%2==0) cout<<"ĞœĞµĞ´Ğ¸Ğ°Ğ½Ğ°="<<float (arr[n/2]+arr[n/2-1])/2<<endl;
+	else cout<<"ĞœĞµĞ´Ğ¸Ğ°Ğ½Ğ°="<<arr[n/2]<<endl;
+	cout<<"ĞœĞ¾Ğ´Ğ°= ";
+	if (moda(arr,n)==0) cout<<"ĞœĞ¾Ğ´Ñ‹ Ğ½ĞµÑ‚"<<endl;
 	else cout<<moda(arr,n)<<endl;
-	cout<<"Äèñïåğñèÿ= "<<disp(arr,n);
+	cout<<"Ğ”Ğ¸ÑĞ¿ĞµÑ€ÑĞ¸Ñ= "<<disp(arr,n);
 	return 1;
 }
